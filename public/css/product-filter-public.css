@@ -18,12 +18,14 @@
     justify-content: center;
   }
   .__product_filter .filter_item{
+    all: unset;
     padding: .3em 2em .3em;
     background-color: transparent;
     text-decoration: none;
     color: #2ea3f2;
     border-radius: 3px;
     border: 2px solid #2ea3f2;
+    cursor: pointer;
   }
   .__product_filter .filter_item.active{
     background-color: #2ea3f2;

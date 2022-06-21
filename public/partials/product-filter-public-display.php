@@ -26,12 +26,12 @@ function get_product_category_by_id( $category_id ) {
         <?php 
         if(get_option('product_filter_category1')){
             ?>
-            <a href="#" class="filter_item active" data-product-filter=".<?php echo get_option('product_filter_category1') ?>"><?php echo get_product_category_by_id( get_option('product_filter_category1') ) ?></a>
+            <button class="filter_item active" data-product-filter=".<?php echo get_option('product_filter_category1') ?>"><?php echo get_product_category_by_id( get_option('product_filter_category1') ) ?></button>
             <?php
         }
         if(get_option('product_filter_category2')){
             ?>
-            <a href="#" class="filter_item" data-product-filter=".<?php echo get_option('product_filter_category2') ?>"><?php echo get_product_category_by_id( get_option('product_filter_category2') ) ?></a>
+            <button class="filter_item" data-product-filter=".<?php echo get_option('product_filter_category2') ?>"><?php echo get_product_category_by_id( get_option('product_filter_category2') ) ?></button>
             <?php
         }
         ?>
