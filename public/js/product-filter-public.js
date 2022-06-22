@@ -28,7 +28,7 @@ jQuery(function ($) {
       touchDrag: true,
       slideBy: 1,
       dots: false,
-      nav: false,
+      nav: true,
       responsive: {
         0: {
           items: 1,

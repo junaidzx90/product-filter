@@ -70,7 +70,7 @@ class Product_Filter {
 		if ( defined( 'PRODUCT_FILTER_VERSION' ) ) {
 			$this->version = PRODUCT_FILTER_VERSION;
 		} else {
-			$this->version = '1.0.1';
+			$this->version = '1.0.2';
 		}
 		$this->plugin_name = 'product-filter';
 

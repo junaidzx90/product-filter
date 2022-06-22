@@ -2,103 +2,142 @@
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
- #product_filter{
-    text-align: center;
-    display: none;
+#product_filter {
+  text-align: center;
+  display: none;
+}
+
+.owl-carousel {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.__product_filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.__product_filter .filter_item {
+  all: unset;
+  padding: .3em 2em .3em;
+  background-color: transparent;
+  text-decoration: none;
+  color: #2ea3f2;
+  border-radius: 3px;
+  border: 2px solid #2ea3f2;
+  cursor: pointer;
+}
+
+.__product_filter .filter_item.active {
+  background-color: #2ea3f2;
+  border-color: #2ea3f2;
+  color: #fff;
+}
+
+#__product_slider div.product_item {
+  min-height: 150px;
+  padding: 10px;
+  text-align: center;
+}
+
+#__product_slider div.product_item .product_image {
+  height: 300px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#__product_slider div.product_item .product_image img {
+  width: fit-content;
+}
+
+#__product_slider div.product_item h4.product_title {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+#__product_slider div.product_item ._price {
+  margin: 15px 0;
+}
+
+#__product_slider div.product_item ._price ins {
+  text-decoration: none;
+}
+
+.buton-wrapper a {
+  text-decoration: none !important;
+  font-size: 20px;
+  font-weight: 500;
+  padding: .3em 1em;
+  line-height: 1.7em !important;
+  background-color: transparent;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  color: #2ea3f2 !important;
+  border: 2px solid;
+  border-radius: 3px;
+  -webkit-transition-duration: .2s;
+  transition-duration: .2s;
+  -webkit-transition-property: all !important;
+  transition-property: all !important;
+  position: relative;
+}
+
+.buton-wrapper a:hover {
+  border: 2px solid transparent;
+  padding: .3em 2em .3em .7em;
+}
+
+.buton-wrapper a:hover:after {
+  opacity: 1;
+}
+
+.buton-wrapper a:after {
+  font-size: 18px;
+  line-height: 1em;
+  content: "❯";
+  opacity: 0;
+  position: absolute;
+  right: 10px;
+  top: 51%;
+  transform: translateY(-50%);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  text-transform: none;
+  -webkit-font-feature-settings: "kern"off;
+  font-feature-settings: "kern"off;
+  font-variant: none;
+  font-style: normal;
+  font-weight: 400;
+  text-shadow: none;
+}
+.owl-nav button {
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
+}
+.owl-nav button span {
+  font-size: 40px;
+  line-height: 0px;
+  color: #2ea3f2;
+}
+.owl-nav button:nth-child(1) {
+  left: -15px;
+}
+.owl-nav button:nth-child(2) {
+  right: -30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .owl-nav button:nth-child(1) {
+    left: 15px !important;
   }
-  .owl-carousel{
-      display: flex !important;
-      flex-direction: row;   
-      justify-content: center;
+  .owl-nav button:nth-child(2) {
+    right: 30px !important;
   }
-  .__product_filter{
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    justify-content: center;
-  }
-  .__product_filter .filter_item{
-    all: unset;
-    padding: .3em 2em .3em;
-    background-color: transparent;
-    text-decoration: none;
-    color: #2ea3f2;
-    border-radius: 3px;
-    border: 2px solid #2ea3f2;
-    cursor: pointer;
-  }
-  .__product_filter .filter_item.active{
-    background-color: #2ea3f2;
-    border-color: #2ea3f2;
-    color: #fff;
-  }
-  #__product_slider div.product_item{
-    min-height: 150px;
-    padding: 10px;
-    text-align: center;
-  }
-  #__product_slider div.product_item .product_image {
-      height: 300px;
-      margin-bottom: 20px;
-      display: flex;
-      justify-content: center;
-  }
-  #__product_slider div.product_item .product_image img{
-    width: fit-content;
-  }
-  #__product_slider div.product_item h4.product_title{
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
-  }
-  #__product_slider div.product_item ._price{
-    margin: 15px 0;
-  }
-  #__product_slider div.product_item ._price ins{
-    text-decoration: none;
-  }
-  .buton-wrapper a{
-    text-decoration: none !important;
-    font-size: 20px;
-    font-weight: 500;
-    padding: .3em 1em;
-    line-height: 1.7em!important;
-    background-color: transparent;
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    color: #2ea3f2 !important;
-    border: 2px solid;
-    border-radius: 3px;
-    -webkit-transition-duration: .2s;
-    transition-duration: .2s;
-    -webkit-transition-property: all!important;
-    transition-property: all!important;
-    position: relative;
-  }
-  .buton-wrapper a:hover {
-      border: 2px solid transparent;
-      padding: .3em 2em .3em .7em;
-  }
-  .buton-wrapper a:hover:after{
-    opacity: 1;
-  }
-  .buton-wrapper a:after {
-      font-size: 18px;
-      line-height: 1em;
-      content: "❯";
-      opacity: 0;
-      position: absolute;
-      right: 10px;
-      top: 51%;
-      transform: translateY(-50%);
-      -webkit-transition: all .2s;
-      transition: all .2s;
-      text-transform: none;
-      -webkit-font-feature-settings: "kern" off;
-      font-feature-settings: "kern" off;
-      font-variant: none;
-      font-style: normal;
-      font-weight: 400;
-      text-shadow: none;
-  }
+}
